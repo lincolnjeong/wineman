@@ -3,7 +3,7 @@ applications:
 - name: wineman
   command: npm start
   path: .
-  memory: 256M
+  memory: 512M
   instances: 1
   env:
     NPM_CONFIG_PRODUCTION: false
