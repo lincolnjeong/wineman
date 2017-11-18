@@ -13,7 +13,32 @@ let postMessage = (req, res) => {
   let content = {
   	'text' : req.body.content
   };
-
+    
+//------------------- Lincoln TEST -------------------
+  conversation.getConversationResponse(content, {}).then(data => {
+      // context를 저장합니다.
+//      db.insert({
+//        '_id' : user_key,
+//        'user_key' : user_key,
+//        'context': data.context,
+//        'type' : 'kakao'
+//      });
+          
+      return res.json({
+          "message" : {
+            "text" : getOutputText(data)
+          }
+      });   
+    }).catch(function(err){
+      return res.json({
+          "message" : {
+            "text" : JSON.stringify(err.message)
+          }
+      });
+    });
+//------------------------------------------------------
+  
+  
   //user_key를 사용하여 db에 저장된 context가 있는지 확인합니다.
 /*
   db.get(user_key).then(doc => {
