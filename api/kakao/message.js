@@ -1,8 +1,8 @@
 'use strict';
 
 const conversation = require('../message');
-//const cloudant = require('../../util/db');
-//const db = cloudant.db;
+const cloudant = require('../../util/db');
+const db = cloudant.db;
 
 let postMessage = (req, res) => {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -15,32 +15,31 @@ let postMessage = (req, res) => {
   };
     
 //------------------- Lincoln TEST -------------------
-  conversation.getConversationResponse(content, {}).then(data => {
-      // context를 저장합니다.
-//      db.insert({
-//        '_id' : user_key,
-//        'user_key' : user_key,
-//        'context': data.context,
-//        'type' : 'kakao'
+//  conversation.getConversationResponse(content, {}).then(data => {
+//      // context를 저장합니다.
+////      db.insert({
+////        '_id' : user_key,
+////        'user_key' : user_key,
+////        'context': data.context,
+////        'type' : 'kakao'
+////      });
+//          
+//      return res.json({
+//          "message" : {
+//            "text" : getOutputText(data)
+//          }
+//      });   
+//    }).catch(function(err){
+//      return res.json({
+//          "message" : {
+//            "text" : JSON.stringify(err.message)
+//          }
 //      });
-          
-      return res.json({
-          "message" : {
-            "text" : getOutputText(data)
-          }
-      });   
-    }).catch(function(err){
-      return res.json({
-          "message" : {
-            "text" : JSON.stringify(err.message)
-          }
-      });
-    });
+//    });
 //------------------------------------------------------
   
-  
+//---  
   //user_key를 사용하여 db에 저장된 context가 있는지 확인합니다.
-/*
   db.get(user_key).then(doc => {
   	//저장된 context가 있는 경우 이를 사용하여 conversation api를 호출합니다.
     conversation.getConversationResponse(content, doc.context).then(data => {
@@ -87,7 +86,7 @@ let postMessage = (req, res) => {
     });
     
   });
-*/
+//---
 };
 
 let getOutputText = data => {
