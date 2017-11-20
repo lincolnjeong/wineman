@@ -19,16 +19,19 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "async": "^2.6.0",
     "body-parser": "^1.15.2",
     "cfenv": "*",
     "cloudant": "1.6.x",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "line-msg-api": "^1.0.17",
     "moment": "^2.17.1",
     "node-schedule": "^1.2.0",
     "node-telegram-bot-api": "^0.27.0",
     "request": "^2.80.0",
-    "watson-developer-cloud": "^2.25.1"
+    "watson-developer-cloud": "^2.42.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
