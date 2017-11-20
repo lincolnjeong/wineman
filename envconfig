@@ -7,4 +7,4 @@ CONVERSATION_PASSWORD=<conversation-password>
 
 # Cloudant
 CLOUDANT_URL=<cloudant-url>
-CLOUDANT_CONTEXT_DB=<db-name>
+CLOUDANT_CONTEXT_DB=context
