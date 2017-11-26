@@ -31,7 +31,8 @@
     "node-schedule": "^1.2.0",
     "node-telegram-bot-api": "^0.27.0",
     "request": "^2.80.0",
-    "watson-developer-cloud": "^2.42.0"
+    "watson-developer-cloud": "^2.42.0",
+    "xls-to-json": "^0.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
